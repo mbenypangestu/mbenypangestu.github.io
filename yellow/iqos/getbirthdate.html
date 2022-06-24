@@ -23,7 +23,7 @@
 			text-align: center;
 			font-size: 11px;
 		}
-		input[type=submit] {
+		button {
 			color: #fff;
 			width: 100%;
 			border: 0;
@@ -32,7 +32,7 @@
 			border-radius: 20px;
 			font-size: 14px;
 		}
-		input[type=submit]:hover {
+		button:hover {
 			background-color: #00d1d2;
 			border-color: #00d1d2;
 		}
@@ -45,40 +45,25 @@
     </style>
 
     <script type="text/javascript">
-		document.getElementById('phone_error').innerHTML = "";
-		if (a == "ok" && b == "ok" && c == "ok" && d == "ok") {
-			// clearTimeout(x)
-			console.log('First name -', $("#firstname").val())
-			console.log('Last name -', $("#lastname").val())
-			console.log('Email -', $("#email").val())
-			console.log('Phone -', $("#phone").val())
-			let queryback = new URLSearchParams(window.location.search).get('query')
+		function sendBirthdate() {
+			let monthValue = document.getElementById("monthSelect").value;
+			let yearValue = document.getElementById("yearSelect").value;
+
+			console.log('Month -', monthValue)
+			console.log('Year -',  yearValue)
+
 			window.parent.postMessage(JSON.stringify({
 				event_code: 'ym-client-event',
 				data: JSON.stringify({
 					event: {
-						code: "userdetails",
+						code: "birthdateUser",
 						data: {
-							firstname: $("#firstname").val(),
-							lastname: $("#lastname").val(),
-							email: $("#email").val(),
-							phone: $("#phone").val()
+							month: monthValue,
+							year: yearValue,
 						}
 					}
 				})
 			}), '*');
-			$('#custom :input').attr('disabled', 'disabled');
-			$('#custom').fadeTo("slow", 0.15, function() {
-				$(this).find(':input').attr('disabled', 'disabled');
-				$(this).find('label').css('cursor', 'default');
-			});
-				if(language_ == 'ar'){
-						$('#add').append("شكرا لك");
-				   }else{
-						$('#add').append("Thank You");
-					}
-		} else {
-			console.log("---else--")
 		}
     </script>
 </head>
@@ -91,27 +76,7 @@
 			</p>
 
 			<form>
-	<!-- 		<label id="firstname_head"></label>
-				<input type="text"  id="firstname" placeholder="" required name="firstname" size="23">
-				<br><label id='firstname_error'></label>
-				<br>
-
-				<label id="lastname_head"></label>
-				<input type="text"  id="lastname" placeholder="" required  name="firstname" size="23">
-				<br><label id='lastname_error'></label>
-				<br>
-
-				<label id="email_head"></label>
-				<input type="email" id="email" placeholder="" required name="email" size="23">
-				<br><label id='email_error'></label>
-				<br>
-
-				<label id="mobile_head"></label>
-				<input type="tel" id="phone" placeholder="" required name="phone" size="23">
-				<br><label id='phone_error'></label>
-				<br> -->
-
-				<select class="form-select select-custom" aria-label="Default select example" name="month" required>
+				<select class="form-select select-custom" aria-label="Default select example" id="monthSelect" name="monthSelect" required>
 					<option disabled selected>Bulan</option>
 					<option value="1">Januari</option>
 					<option value="2">Februari</option>
@@ -129,7 +94,7 @@
 
 				<br>
 
-				<select  class="form-select select-custom" aria-label="Default select example" name="year" required>
+				<select  class="form-select select-custom" aria-label="Default select example" id="yearSelect" name="yearSelect" required>
 					<option disabled selected>Tahun</option>
 					<option value="2022">2022</option>
 					<option value="2021">2021</option>
@@ -258,7 +223,7 @@
 
 				<br>
 
-				<input type="submit" value="Konfirmasi"  id="submit" style="width: 100%" >
+				<button id="submit" onclick="return sendBirthdate();">Konfirmasi</button>
 
 			</form>
 

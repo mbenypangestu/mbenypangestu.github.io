@@ -1194,11 +1194,13 @@
                     C = function(e) {
                         var t = e.ymDivBar ? u("#ymDivBar") : u("#ymDivCircle"),
                             n = u("#ymFramebranding");
+                        u("#ymFramebranding").hide();
                         t.addClass("open"), (t.hasClass("removeBackground") || e.skin && e.skin.backgroundVisibility) && (t.removeClass("removeBackground"), t.removeClass("autoHeight")), !e.hideChatButton && "compact" !== window.ymConfig.view || e.skin.hideBranding || (t.show(), n.show())
                     },
                     k = function(e) {
                         var t = e.ymDivBar ? u("#ymDivBar") : u("#ymDivCircle"),
                             n = u("#ymFramebranding");
+                        u("#ymFramebranding").hide();
                         e.skin && e.skin.backgroundVisibility && document.querySelector("#ymDivCircle img") && (document.getElementById("ymDivCircle").className += " removeBackground autoHeight"), t.removeClass("open"), e.hideChatButton ? t.hide() : t.css("opacity", "1"), n.hide()
                     },
                     T = (0, l.Ds)((function() {

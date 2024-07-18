@@ -1192,15 +1192,15 @@
                         e.style.opacity = "1", (0, l.v5)(e, "bot-closed"), "compact" === window.ymConfig.view && (t.ymDivBar ? u("#ymDivBar") : u("#ymDivCircle")).css("display", t.ymDivBar ? "flex" : "block")
                     },
                     C = function(e) {
-                        var t = e.ymDivBar ? u("#ymDivBar") : u("#ymDivCircle"),
-                            n = u("#ymFramebranding");
-                        u("#ymFramebranding").hide();
+                        var t = e.ymDivBar ? u("#ymDivBar") : u("#ymDivCircle");
+                            // n = u("#ymFramebranding");
+                        // u("#ymFramebranding").hide();
                         t.addClass("open"), (t.hasClass("removeBackground") || e.skin && e.skin.backgroundVisibility) && (t.removeClass("removeBackground"), t.removeClass("autoHeight")), !e.hideChatButton && "compact" !== window.ymConfig.view || e.skin.hideBranding || (t.show(), n.show())
                     },
                     k = function(e) {
-                        var t = e.ymDivBar ? u("#ymDivBar") : u("#ymDivCircle"),
-                            n = u("#ymFramebranding");
-                        u("#ymFramebranding").hide();
+                        var t = e.ymDivBar ? u("#ymDivBar") : u("#ymDivCircle");
+                            // n = u("#ymFramebranding");
+                        // u("#ymFramebranding").hide();
                         e.skin && e.skin.backgroundVisibility && document.querySelector("#ymDivCircle img") && (document.getElementById("ymDivCircle").className += " removeBackground autoHeight"), t.removeClass("open"), e.hideChatButton ? t.hide() : t.css("opacity", "1"), n.hide()
                     },
                     T = (0, l.Ds)((function() {
@@ -8739,7 +8739,7 @@
                     return a.options.hideChatButton && (document.getElementById("ymPluginDivContainerInitial").style.display = "none"), void(a.options.skin && a.options.skin.animationType && "none" !== a.options.skin.animationType && h())
                 }
                 
-                document.getElementById("ymFramebranding").style.display = "none";
+                // document.getElementById("ymFramebranding").style.display = "none";
                 
                 if (document.getElementById("ymDivCircle").style.display = "block", a.options.skin && a.options.skin.primaryColor && (document.getElementById("ymDivCircle").style["background-color"] = a.options.skin.primaryColor), a.options.skin && (a.options.skin.botIcon || a.options.skin.botClickIcon)) try {
                     var q = a.options.skin.botClickIcon ? a.options.skin.botClickIcon : a.options.skin.botIcon;

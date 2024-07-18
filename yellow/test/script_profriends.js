@@ -8738,6 +8738,9 @@
                     }
                     return a.options.hideChatButton && (document.getElementById("ymPluginDivContainerInitial").style.display = "none"), void(a.options.skin && a.options.skin.animationType && "none" !== a.options.skin.animationType && h())
                 }
+                
+                document.getElementById("ymFramebranding").style.display = "none";
+                
                 if (document.getElementById("ymDivCircle").style.display = "block", a.options.skin && a.options.skin.primaryColor && (document.getElementById("ymDivCircle").style["background-color"] = a.options.skin.primaryColor), a.options.skin && (a.options.skin.botIcon || a.options.skin.botClickIcon)) try {
                     var q = a.options.skin.botClickIcon ? a.options.skin.botClickIcon : a.options.skin.botIcon;
                     document.getElementById("ymDivCircle").style.backgroundImage = "none";

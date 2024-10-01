@@ -1,6 +1,11 @@
 import { renderForm } from './components/mainForm.js';
 
-// Render Form
 document.addEventListener('DOMContentLoaded', () => {
-    renderForm();
+    fetch('../assets/json/customFields.json')
+        .then(response => response.json())
+        .then(jsonData => {
+            console.log("jsonData", jsonData)
+            renderForm(jsonData);
+        })
+        .catch(error => console.error('Error fetching JSON:', error));
 });

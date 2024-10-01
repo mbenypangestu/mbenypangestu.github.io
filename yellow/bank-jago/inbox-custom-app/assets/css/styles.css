@@ -19,7 +19,7 @@ h1 {
 
 label {
     display: block;
-    margin: 5px 0 5px;
+    margin: 5px 0;
     font-weight: bold;
     font-size: smaller;
 }
@@ -27,12 +27,17 @@ label {
 select, input {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
+input {
+    width: 96%
+}
+
 button {
+    margin-top: 15px;
     width: 100%;
     padding: 10px;
     background-color: #007BFF;
@@ -50,3 +55,11 @@ button:hover {
 .conditional-field {
     display: none;
 }
+
+.hidden {
+    display: none;
+}
+
+/* .nested-fields {
+    padding-top: 10px;
+} */

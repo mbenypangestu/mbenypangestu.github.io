@@ -1,7 +1,7 @@
 import { renderForm } from './components/mainForm.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('../assets/json/customFields.json')
+    fetch('./assets/json/customFields.json')
         .then(response => response.json())
         .then(jsonData => {
             console.log("jsonData", jsonData)

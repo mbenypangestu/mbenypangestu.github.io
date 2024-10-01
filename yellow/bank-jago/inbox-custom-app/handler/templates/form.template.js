@@ -1,20 +1,3 @@
-export function renderForm(formData) {
-    const formContainer = document.getElementById('formContainer');
-    let formHtml = '<form id="customForm">';
-
-    // Generate the first layer dropdown, always visible
-    formHtml += generateField(formData, true);
-
-    // Submit buton
-    formHtml += '<button type="submit">Submit</button>';
-    formHtml += '</form>';
-
-    formContainer.innerHTML = formHtml;
-
-    // Add event listeners for dynamic dropdowns
-    addDynamicBehavior(formData);
-}
-
 export function generateField(field, isVisible = false) {
     let fieldHtml = '';
     const visibilityClass = isVisible ? '' : 'hidden';

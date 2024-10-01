@@ -1,0 +1,3 @@
+[submodule "inbox-custom-app"]
+	path = inbox-custom-app
+	url = https://github.com/mbenypangestu/inbox-custom-app

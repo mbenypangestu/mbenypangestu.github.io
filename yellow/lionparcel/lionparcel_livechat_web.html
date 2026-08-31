@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yellow.ai Chatbot</title>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        window.ymConfig = {
+            bot: "x1745563017845",
+            host: "https://r2.cloud.yellow.ai"
+        };
+
+        (function() {
+            var w = window,
+                ic = w.YellowMessenger;
+
+            if (typeof ic === "function") {
+                ic("reattach_activator");
+                ic("update", ymConfig);
+            } else {
+                var d = document,
+                    i = function() {
+                        i.c(arguments);
+                    };
+
+                function l() {
+                    var e = d.createElement("script");
+
+                    e.type = "text/javascript";
+                    e.async = true;
+                    e.src = "https://cdn.yellowmessenger.com/plugin/widget-v2/latest/dist/main.min.js";
+
+                    var t = d.getElementsByTagName("script")[0];
+                    t.parentNode.insertBefore(e, t);
+                }
+
+                i.q = [];
+
+                i.c = function(e) {
+                    i.q.push(e);
+                };
+
+                w.YellowMessenger = i;
+
+                if (w.attachEvent) {
+                    w.attachEvent("onload", l);
+                } else {
+                    w.addEventListener("load", l, false);
+                }
+            }
+        })();
+    </script>
+
+</body>
+</html>
